@@ -1,5 +1,7 @@
 import "../styles/home.css";
 import { useNavigate } from "react-router-dom";
+import vrImage from "../assets/vrImage.png";
+import bgArrow from "../assets/bgArrowImg.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -31,7 +33,8 @@ function Home() {
 
       {/* LEFT IMAGE */}
       <div className="vrImageSection">
-        <img src="/images/vrImage.png" className="vrImage" alt="" />
+        <img src={vrImage} className="vrImage" alt="vr" />
+
       </div>
 
       {/* TEXT */}
@@ -61,7 +64,7 @@ function Home() {
 
       {/* BACKGROUND ARROW */}
       <div className="bgArrow">
-        <img src="/images/bgArrowImg.png" alt="" />
+        <img src={bgArrow} className="bgArrowImg" alt="arrow" />
       </div>
       
 
