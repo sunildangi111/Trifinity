@@ -30,7 +30,7 @@ function TutorForm() {
         e.target.reset();       // clear form
 
         // 🔁 optional auto close
-        setTimeout(() => setShowModal(false), 5000);
+        // setTimeout(() => setShowModal(false), 5000);
       }
     } catch (err) {
       console.log("Unexpected error:", err);
