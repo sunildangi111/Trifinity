@@ -1,0 +1,254 @@
+/* .home-page {
+  background-color: #111;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container {
+  text-align: center;
+}
+
+.home-button {
+  width: 60%;
+  margin: 10px 0;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+} */
+
+.home-page {
+  display: flex;
+  flex-direction: column;  /* ✅ THIS FIXES IT */
+}
+
+/* ===== SECTION 2 MAIN ===== */
+
+.section-2 {
+  background: #f3f3f3;
+  padding: 80px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* layout */
+.secondSectionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* LEFT IMAGE */
+.vrImageSection {
+  flex: 1;
+}
+
+.vrImage {
+  height: 420px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.content {
+  flex: 1.2;
+  z-index: 2;
+}
+
+/* MAIN HEADING */
+.heading {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000;
+}
+
+/* SUB HEADING (faded like image) */
+.subheading {
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.1);   /* 👈 IMPORTANT FADE EFFECT */
+  margin: 10px 0;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 20px;
+  color: #333;
+  max-width: 600px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.primaryBtn {
+  background: #2c2c2c;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  background: transparent;
+  border: 1px solid #2c2c2c;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* BACKGROUND ARROW */
+.bgArrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.15;   /* 👈 KEY */
+  z-index: 1;
+}
+
+.bgArrow img {
+  height: 500px;
+}
+
+
+/* ===== RESPONSIVE FIX ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .heading {
+    font-size: 50px;
+  }
+
+  .subheading {
+    font-size: 36px;
+  }
+
+  .vrImage {
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  .section-2 {
+    padding: 55px 20px;
+  }
+
+  .secondSectionContainer {
+    flex-direction: column;   /* ✅ STACK VERTICALLY */
+    text-align: center;
+  }
+
+  /* IMAGE */
+  .vrImageSection {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .vrImage {
+    height: 250px;
+  }
+
+  /* TEXT */
+  .content {
+    order: 2;
+  }
+
+  .heading {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .subheading {
+    font-size: 22px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
+
+  /* BUTTONS */
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* HIDE BACKGROUND ARROW (important for clean mobile UI) */
+  .bgArrow {
+    display: none;
+  }
+}
+
+/* NAVBAR BASE */
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 55px;
+  width: 100%;
+  z-index: 100;
+
+  background: transparent; /* ✅ transparent */
+  backdrop-filter: blur(8px); /* glass effect */
+}
+
+/* CONTAINER */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 60px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: none; /* simple hide for now */
+  }
+}
+
